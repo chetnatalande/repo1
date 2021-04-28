@@ -1,0 +1,57 @@
+Snowflake:
+
+Architecture:
+3 layers: DB storage, Virtual warehouse (computing cluster) , cloud services (infra mgmt., metadata, security etc)
+
+Warehouse sizes(sever/cluser): xs(1), s(2), m(4), l(8), xl(16), 2xl(32), 3xl(64), 4xl(128)
+
+Auto resume and auto suspend
+
+3 types of tables-
+1)	Permanent – maintained, secured 
+2)	Temporary – within session
+3)	Transient – across session until explicitly dropped but need not maintained for longer time.
+
+Time travel – retention time
+Fail safe
+
+Data loading:
+File load from internal storage:
+1)	Create file format and stage format if not present already
+2)	Put list of files using “put” command from local file system to stage. Gets stages in zipped format.
+3)	Load files to table from stage using “Copy” command.
+4)	Validate if any failure
+
+SnowSQL – SnowFlake CLI client to execute script
+
+Load JSON file into relational table
+Functions used: Substr, parse_json, 
+
+-------------------------------------------------------------
+
+Snowflake Zero copy cloning – snapshots of db objects such as Database, schema, table etc. cloned. The cloned object shares same partitions as of original one. Upon modification cloned objects partitions and under lying storage changes and it becomes chargeable. Clones can be cloned upto any no. of iterations. 
+
+
+
+
+Clustering vs Partitioning – 
+Clustering : bottom up grouping that generates large number of small groups
+Partitioning: top down grouping that generates small number of large groups
+ --------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+Micro partitioning and snow clustering
+
+
+Query profile – Similar to execution plan in Oracle
+
+
+External Tables - 
+
+
+
+Handy Snowflake Queries:
+
+select get_ddl('table','stage.slack_team')ß
