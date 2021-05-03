@@ -55,3 +55,5 @@ External Tables -
 Handy Snowflake Queries:
 
 select get_ddl('table','stage.slack_team')ß
+
+Storage Integration in Snowflake
