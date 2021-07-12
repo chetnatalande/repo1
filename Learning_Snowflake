@@ -13,6 +13,13 @@ Auto resume and auto suspend
 3)	Transient – across session until explicitly dropped but need not maintained for longer time.
 
 Time travel – retention time
+ To support Time Travel, the following SQL extensions have been implemented:
+ 1) AT | BEFORE - it can be specified in SELECT statements and CREATE … CLONE commands
+   a) TIMESTAMP
+   b) OFFSET (time difference in seconds from the present time)
+   c) STATEMENT (identifier for statement, e.g. query ID)
+ 2) UNDROP command for tables, schemas, and databases.
+ 
 Fail safe
 
 Data loading:
