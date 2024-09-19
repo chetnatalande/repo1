@@ -63,4 +63,6 @@ Handy Snowflake Queries:
 
 select get_ddl('table','stage.slack_team')ß
 
-Storage Integration in Snowflake
+Storage Integration in Snowflake -
+A storage integration is a Snowflake object that stores a generated identity and access management (IAM) entity for your external cloud storage, along with an optional set of allowed or blocked storage locations
+
